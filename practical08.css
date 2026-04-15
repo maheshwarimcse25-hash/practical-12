@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+
+    <div class="carousel-item">
+      <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT6D021vJqNT4XAL6zsDtm5D_78-RIMWYDiv7XMCv5j3CISLHxY_3hKw_GjobnR" class="d-block w-100" width="250" heigth="200">
+    </div>
+    <div class="carousel-item">
+      <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQP2wcKuftypOEOvQTz1Lw9gG6z_9Z7FiD-Rd99a7wea7TJDz4AIfs-WWpmeOfV" class="d-block w-100" width="250" heigth="200">
+    </div>
+  </div>
+</div>
+    </head>
+</html>

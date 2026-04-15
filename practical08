@@ -1,0 +1,33 @@
+.container{
+height: 20px;
+width: 20px;
+background-color: burlywood;
+}
+body{
+    background: radial-gradient(pink, darkblue, yellow);
+}
+.container img:hover
+{
+    height: 100px;
+width: 200px;
+    margin: 1px;
+    padding: 10px;
+    transform: scale(0.1);
+}
+footer{
+    text-align:center;
+    color:black;
+    padding:15px;
+    font-size:15px;
+}
+.overlay{
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    padding:20px;
+    background:linear-gradient(to top,rgba(0,0,0,0.8),transparent);
+    color:black;
+    text-align:center;
+    opacity: 0;
+    transition: 0.7s;
+}
