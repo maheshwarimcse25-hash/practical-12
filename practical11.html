@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Super Easy APIs</title>
+<style>
+  body{font-family:Arial;text-align:center;padding:30px;background:#f0f0f0}
+  button{padding:20px;font-size:24px;margin:15px;width:300px;border-radius:10px;background:#4CAF50;color:white;cursor:pointer}
+  button:hover{background:#45a049}
+  #drag{padding:30px;background:#FF5722;color:white;font-size:28px;cursor:grab;display:inline-block}
+  #drop{width:250px;height:120px;border:4px dashed #999;margin:20px auto;line-height:120px;font-size:24px}
+  #text{padding:15px;font-size:20px;width:300px;margin:10px}
+  #info{font-size:24px;margin:30px;color:#333}
+</style>
+</head>
+<body>
+<h1>3 Easy HTML5 APIs</h1>
+
+<div id="drag" draggable="true">Drag This</div>
+<div id="drop">Drop Zone</div>
+
+<button onclick="loc()">Show My Location</button>
+
+<input id="text" placeholder="Type text here">
+<button onclick="s()">Save</button>
+<button onclick="l()">Load</button>
+
+<p id="info">Try buttons above!</p>
+
+<script>
+d=document.getElementById('drag');
+z=document.getElementById('drop');
+d.ondragstart=e=>e.dataTransfer.setData('t','1');
+z.ondragover=e=>e.preventDefault();
+z.ondrop=e=>{e.preventDefault();z.innerHTML='DONE';};
+
+function loc(){
+ navigator.geolocation.getCurrentPosition(p=>document.getElementById('info').innerHTML='Lat:'+p.coords.latitude.toFixed(3)+' Lon:'+p.coords.longitude.toFixed(3));
+}
+
+function s(){
+ localStorage.t=document.getElementById('text').value;
+ document.getElementById('info').innerHTML+='<br>Saved';
+}
+
+function l(){
+ document.getElementById('text').value=localStorage.t|| '';
+ document.getElementById('info').innerHTML+='<br>Loaded';
+}
+</script>
+</body>
+</html>
